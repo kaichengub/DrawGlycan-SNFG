@@ -47,10 +47,10 @@ classdef MonoShape
           ManA = 'Divided Diamond';
           GalA = 'Divided Diamond';
           GulA = 'Divided Diamond';
-          AltA = 'Divided Diamond';
+          AltA = 'Divided Diamond Inverted';
           AllA = 'Divided Diamond';
           TalA = 'Divided Diamond';
-          IdoA = 'Divided Diamond';
+          IdoA = 'Divided Diamond Inverted';
           
           % Deoxyhexose
           Deoxyhexose = 'Filled Triangle';
@@ -88,6 +88,12 @@ classdef MonoShape
           Neu    = 'Filled Diamond';
           Sia      = 'Filled Diamond';
           
+          % Dideoxynonulosonate
+          Dideoxynonulosonate = 'Flattened Diamond';
+          Pse = 'Flattened Diamond';
+          Leg = 'Flattened Diamond';
+          Aci = 'Flattened Diamond';
+          
           % Unknown
           Unknown = 'Flat Hexagon';
           Bac      = 'Flat Hexagon';
@@ -107,9 +113,5 @@ classdef MonoShape
           Sor = 'Pentagon';
           Psi = 'Pentagon';
           
-          % Dideoxynonulosonate
-          Pse = 'Flattened Diamond';
-          Leg = 'Flattened Diamond';
-          Aci = 'Flattened Diamond';
       end
 end

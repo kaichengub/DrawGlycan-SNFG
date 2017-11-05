@@ -105,6 +105,17 @@ switch identity
             patch(vertexes(3:5,1),vertexes(3:5,2),'white','edgecolor',[1 1 1])
             plot([vertexes(:,1);vertexes(3,1)],[vertexes(:,2);vertexes(3,2)],'color',color,'linewidth',linewidth)
         end
+        if strcmpi(shape,'Divided Diamond Inverted')
+            r = diameter/2;
+            vertexes = [origin(1)-r*cos(theta),origin(2)+r*sin(theta);...
+                origin(1)+r*sin(theta),origin(2)+r*cos(theta);...
+                origin(1)+r*cos(theta),origin(2)-r*sin(theta);...
+                origin(1)-r*sin(theta),origin(2)-r*cos(theta);...
+                origin(1)-r*cos(theta),origin(2)+r*sin(theta)];
+            patch(vertexes(3:5,1),vertexes(3:5,2),fill,'edgecolor',[1 1 1])
+            patch(vertexes(1:3,1),vertexes(1:3,2),'white','edgecolor',[1 1 1])
+            plot([vertexes(:,1);vertexes(3,1)],[vertexes(:,2);vertexes(3,2)],'color',color,'linewidth',linewidth)
+        end
         
         if strcmpi(shape,'Filled Triangle')
             r = sqrt(2)/2*diameter;

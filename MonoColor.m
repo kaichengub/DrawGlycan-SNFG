@@ -95,12 +95,18 @@ classdef MonoColor
           Rib   = 'Pink';
           
           % Nonulosonate
-          Nonulosonate = 'White';
+          Deoxynonulosonate = 'White';
           Kdn    = 'Green';
           Neu5Ac = 'Purple';
           Neu5Gc = 'LightBlue';
           Neu    = 'Brown';
           Sia = 'Red';
+          
+          % Dideoxynonulosonate
+          Dideoxynonulosonate = 'White'
+          Pse = 'Green';
+          Leg = 'Yellow';
+          Aci = 'Pink';
           
           % Unknown
           Unknown = 'White';
@@ -120,11 +126,6 @@ classdef MonoColor
           Tag = 'Yellow';
           Sor = 'Orange';
           Psi = 'Pink';
-          
-          % Dideoxynonulosonate
-          Pse = 'Green';
-          Leg = 'Yellow';
-          Aci = 'Pink';
-          
+
       end
 end

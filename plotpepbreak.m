@@ -39,10 +39,12 @@ else
     pepbreaktyp = fieldnames(pepbreak);
     pepbreakpos = [];
     pepbreakcont = {};
+    pepbreaktype = {};
     for i = 1:length(pepbreaktyp)
         if ismember(pepbreaktyp{i},{'N','C'})
             pepbreakinfo = pepbreak.(pepbreaktyp{i});
             pepbreakpos = [pepbreakpos;cell2mat(pepbreakinfo(:,2))];
+            pepbreaktype = [pepbreaktype;repmat(pepbreaktyp(i),size(pepbreakinfo,1),1)];
             pepbreakcont = [pepbreakcont;pepbreakinfo(:,1)];
         end
     end
@@ -73,7 +75,7 @@ else
         end
         posy = [-1,-1-letterheight];
         plot([posx,posx],posy,'k')
-        localpepbreaktyp = pepbreaktyp(unibreakposind == i);
+        localpepbreaktyp = pepbreaktype(unibreakposind == i);
         localpepbreakcont = pepbreakcont(unibreakposind == i);
         for j = 1:numel(localpepbreaktyp)
             if strcmpi(localpepbreaktyp{j},'N')

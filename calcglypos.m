@@ -128,7 +128,7 @@ else
 end
 
 
-%% build bondmap, a numerical array describing conncetions between monosac.
+%% build adjacency matrix "bondmap"
 bondmap = zeros(length(distance));
 readind = 1;
 while readind < length(distance)
